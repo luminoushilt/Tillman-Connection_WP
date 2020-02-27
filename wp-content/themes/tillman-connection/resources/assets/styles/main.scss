@@ -1,17 +1,25 @@
-/** This is the single file output by sass. It is intended to ONLY @import other files. **/
+@import "common/variables";
 
-//---------------------------------------------------------------------
-// Fonts
-//---------------------------------------------------------------------
-@import "typography/font";
+/** Import everything from autoload */
+@import "./autoload/**/*";
 
-//---------------------------------------------------------------------
-// Base Styles
-//---------------------------------------------------------------------
-@import "mixins/bourbon";
-@import "base/base";
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import "~some-node-module";
 
-//---------------------------------------------------------------------
-// Layout
-//---------------------------------------------------------------------
-@import "layout/layout-index";
+/** Import theme styles */
+@import "common/global";
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/wp-classes";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/tinymce";

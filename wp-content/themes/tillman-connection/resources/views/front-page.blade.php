@@ -12,14 +12,14 @@
 		<a class="button button-default get-connected scroll-link" href="#greeting">Get Connected</a>
 	</div>
 </section>
-<section class="section section-content" id="greeting">
+<section class="section columns">
 	<h1 class="title">
 		{{ the_field('page_intro') }}
 	</h1>
-	<div class="family-greeting">
+	<div class="column is-half family-greeting">
 		{{ the_field('family_greeting') }}
 	</div>
-	<div class="tillman-connection-logo-section">
+	<div class="column is-half tillman-connection-logo-section">
 		<h2>Tillman Connection</h2>
 		<i class="fas fa-wifi tillman-connection"></i>
 		<h2>21st Century</h2>
