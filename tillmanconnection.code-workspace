@@ -4,5 +4,8 @@
       "path": "."
     }
   ],
-  "settings": {}
+  "settings": {
+    "editor.wordWrapColumn": 120,
+    "editor.hover.delay": 500
+  }
 }

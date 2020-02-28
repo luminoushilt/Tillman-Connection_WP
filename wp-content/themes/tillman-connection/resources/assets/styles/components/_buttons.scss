@@ -41,3 +41,13 @@ $_button-background-color-hover: shade($action-color, 20%);
     }
   }
 }
+
+.is-tillman-teal {
+  background-color: $tillman;
+  color: $white;
+
+  &:hover {
+    background-color: $white;
+    color: $tillman;
+  }
+}
