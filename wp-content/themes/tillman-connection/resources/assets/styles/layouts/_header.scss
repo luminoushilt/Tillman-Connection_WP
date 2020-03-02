@@ -1,3 +1,52 @@
-.banner .nav li {
-  @extend .navbar-item;
+.banner {
+  background-color: $tillman;
+  color: $white;
+
+  .center-navbar-content {
+    align-items: center;
+  }
+
+  .brand-logo {
+    align-self: center;
+    display: flex;
+    text-decoration: none;
+
+    .tillman-connection {
+      color: $white;
+      font-size: 1.3rem;
+      padding-top: 4px;
+      padding-right: 5px;
+      padding-left: 17px;
+    }
+  }
+
+  .navbar-company-name {
+    color: $white;
+    display: block;
+    font-family: $heading-font-family;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      @extend .navbar-item;
+
+      align-self: center;
+
+      a {
+        color: $white;
+      }
+    }
+  }
 }
+
+.is-tillman {
+  background-color: $tillman;
+  color: $white;
+}
+
