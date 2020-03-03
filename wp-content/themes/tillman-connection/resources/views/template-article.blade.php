@@ -21,5 +21,7 @@
 		{{ the_field('content_area') }}
 	</div>
 </section>
+@php do_action('get_contact-section') @endphp
+@include('partials.contact-section')
 
 @endsection
