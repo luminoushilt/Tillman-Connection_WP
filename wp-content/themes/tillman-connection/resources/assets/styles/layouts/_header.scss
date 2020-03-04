@@ -29,6 +29,15 @@
     text-transform: uppercase;
   }
 
+  .tillman-burger {
+    color: $white;
+    justify-content: flex-start;
+
+    &:hover {
+      background-color: $tillman;
+    }
+  }
+
   .nav {
     display: flex;
     justify-content: space-around;
@@ -50,3 +59,49 @@
   color: $white;
 }
 
+@include touch {
+  .is-tillman {
+    .navbar-menu {
+      background-color: $tillman;
+
+      .nav {
+        flex-direction: column;
+
+        li a {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .navbar-menu {
+    margin: 1rem;
+
+    .nav li a {
+      font-size: 0.93rem;
+      margin: 0 0 0 2em;
+      opacity: 1;
+      position: relative;
+
+      &::before {
+        background-color: $dark-gray;
+        content: "";
+        display: block;
+        height: 5px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: -0.75em;
+        transform: scale(0, 1);
+        transition: transform $navbar-timing $navbar-duration;
+      }
+
+      &:hover::before,
+      &:focus::before {
+        transform: scale(1, 1);
+      }
+    }
+  }
+}
