@@ -22,3 +22,16 @@ const routes = new Router({
 
 // Load Events
 jQuery(document).ready(() => routes.loadEvents());
+
+jQuery(document).ready(() => main());
+
+const main = () => {
+
+  $('.navbar-burger').on('click', () => toggleMenu());
+
+  const toggleMenu = () => {
+    // Toggle the 'is-active' class on both the 'navbar-burger' and the 'navbar-menu'
+    $('.navbar-burger').toggleClass('is-active');
+    $('.navbar-menu').toggleClass('is-active');
+  }
+}
