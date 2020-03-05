@@ -69,6 +69,7 @@
 
         li a {
           color: $white;
+          font-size: 0.93rem;
         }
       }
     }
@@ -76,11 +77,15 @@
 }
 
 @include desktop {
+  .navbar-company-name {
+    margin-left: 20px;
+  }
+
   .navbar-menu {
     margin: 1rem;
 
     .nav li a {
-      font-size: 0.93rem;
+      font-size: 1.2rem;
       margin: 0 0 0 2em;
       opacity: 1;
       position: relative;

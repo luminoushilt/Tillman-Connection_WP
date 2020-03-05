@@ -3,8 +3,8 @@
     <nav class="navbar is-tillman center-navbar-content" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="brand brand-logo" href="{{ home_url('/') }}">
-          <i class="fas fa-wifi tillman-connection"></i>
-          <span class="navbar-company-name">{{ get_bloginfo('name', 'display') }}</span>
+          <i class="fas fa-wifi is-size-3 is-size-4-touch tillman-connection"></i>
+          <span class="navbar-company-name is-size-4 is-size-5-touch">{{ get_bloginfo('name', 'display') }}</span>
         </a>
         <a role="button" class="navbar-burger tillman-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
           <span aria-hidden="true"></span>
