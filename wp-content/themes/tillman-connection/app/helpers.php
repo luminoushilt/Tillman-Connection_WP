@@ -136,3 +136,48 @@ function display_sidebar()
     isset($display) || $display = apply_filters('sage/display_sidebar', false);
     return $display;
 }
+
+/**
+ * Custom Post Type Builder
+ */
+ function add_custom_post_type($singular_name, $plural_name, $lower_case, $admin_icon, $archive, $slug_name)
+ {
+    // Register Custom Post Type
+    $args = array(
+        'labels' => array(
+            'name' => __($singular_name),
+            'singular_name' => __($singular_name),
+            'menu_name' => __($singular_name),
+            'name_admin_bar' => $plural_name,
+            'add_new' => 'Add New ' . $singular_name ,
+            'add_new_item' => 'Add New ' .$singular_name,
+            'new_item' => 'New ' . $singular_name,
+            'edit_item' => 'Edit ' . $singular_name,
+            'view_item' => 'View ' . $singular_name,
+            'all_items' => 'All ' . $plural_name,
+            'search_items' => 'Search ' . $plural_name,
+            'parent_item_colon' => 'Parent ' . $plural_name . ':',
+            'not_found' => 'No ' . $lower_case . ' found.',
+            'not_found_in_trash' => 'No ' . $lower_case . ' found in Trash.'
+        ),
+        'public' => true,
+        'menu_icon' => $admin_icon,
+        'rewrite' => array('slug' => $slug_name),
+        'capability_type' => 'post',
+        'has_archive' => $archive,
+        'hierarchical' => false,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail',
+            'revisions'
+        )
+    );
+    return register_post_type($slug_name, $args);
+}
+
+// Committee Instance of registering custom post types
+
+add_custom_post_type('Committee Member', 'Committee Members', 'committee members', 'dashicons-groups', false, 'committee-members');
+add_custom_post_type('Fundraiser', 'Fundraisers', 'fundraisers', 'dashicons-chart-line', true, 'fund');
