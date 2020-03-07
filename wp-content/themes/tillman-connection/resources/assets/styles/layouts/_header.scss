@@ -51,6 +51,29 @@
         color: $white;
       }
     }
+
+    .menu-item-has-children {
+      @extend .dropdown;
+
+      &:hover {
+        @extend .is-hoverable;
+      }
+
+      .sub-menu {
+        @extend .dropdown-menu;
+
+        background-color: $tillman;
+        color: $white;
+
+        li {
+          margin: 1rem 0;
+
+          a {
+            font-size: 0.93rem;
+          }
+        }
+      }
+    }
   }
 }
 

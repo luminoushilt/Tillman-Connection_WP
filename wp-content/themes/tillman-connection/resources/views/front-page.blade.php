@@ -19,7 +19,7 @@
 		<div class="container">
 			<div class="columns is-multiline">
 				<div class="column is-half-desktop family-greeting">
-					<h1 class="title is-size-3-touch">
+					<h1 class="title is-size-2 is-size-4-touch">
 						{{ the_field('page_intro') }}
 					</h1>
 					<span class="is-size-5-touch">{{ the_field('family_greeting') }}</span>
