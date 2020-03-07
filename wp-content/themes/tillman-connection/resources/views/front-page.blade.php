@@ -7,57 +7,50 @@
 @section('content')
 <!-- front-page.blade.php -->
 
-<section class="hero get-connected-container">
-	@php
-		$featured_image = get_field('banner_image');
-	@endphp
-	<img src="{{ $featured_image['url'] }}" alt="{{ $featured_image['alt'] }}" class="img-responsive">
-	<a class="button is-tillman-teal get-connected scroll-link" href="#greeting">Get Connected</a>
+@php
+	$featured_image = get_field('banner_image');
+@endphp
+
+<section class="hero get-connected-container" style="background-image:url({{ $featured_image['url'] }})">
+	<a class="button is-tillman-teal get-connected is-size-4 is-size-6-touch" href="#greeting">Get Connected</a>
 </section>
 <section class="hero hero-section">
 	<div class="hero-body">
 		<div class="container">
-			<div class="columns">
+			<div class="columns is-multiline">
 				<div class="column is-half-desktop family-greeting">
-					<h1 class="title">
+					<h1 class="title is-size-2 is-size-4-touch">
 						{{ the_field('page_intro') }}
 					</h1>
-					{{ the_field('family_greeting') }}
+					<span class="is-size-5-touch">{{ the_field('family_greeting') }}</span>
 				</div>
 				<div class="column is-half-desktop tillman-connection-logo-section">
-					<h2>Tillman Connection</h2>
+					<h2 class="is-size-3-touch">Tillman Connection</h2>
 					<i class="fas fa-wifi tillman-connection"></i>
-					<span>21st Century</span>
+					<span class="is-size-3-touch">21st Century</span>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
 <section class="hero hero-section">
-	<div class="container hero-section-content">
+	<div class="container hero-section-content is-size-2 is-size-4-touch">
 		{{ the_field('reunion_mission_statement') }}
 	</div>
 </section>
 <section class="hero hero-section">
 	<div class="section-break-image">
-		<div class="container">
+		<div class="container is-size-1 is-size-3-touch">
 			{{ the_field('location_pitch') }}
 		</div>
 	</div>
 </section>
 <section class="hero hero-section">
-	<div class="container hero-section-content">
+	<div class="container hero-section-content is-size-2 is-size-4-touch">
 		{{ the_field('concluding_statement') }}
 	</div>
 </section>
-<section class="hero hero-section">
-	<div class="container hero-section-content">
-		<p>
-			For any questions, concerns or suggestions feel free to
-			<a class="section-content-link" href="mailto:info@tillmanconnection.com">
-				contact one of your committee members</a>.
-		</p>
-	</div>
-</section>
+@php do_action('get_contact-section') @endphp
+@include('partials.contact-section')
 
 @endsection
