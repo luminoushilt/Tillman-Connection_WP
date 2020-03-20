@@ -7,7 +7,11 @@
 @section('content')
 <!-- archive-fund.blade.php -->
   @include('partials.page-header')
-
+	<section class="article-title hero article-banner-container" style="background-image:url({{ $featured_image['url'] }})">
+		<h1 class="title is-size-1 is-size-3-touch">
+			{{ the_field('page_title') }}
+		</h1>
+	</section>
   <section class="fundraise-hero">
 		@while (have_posts()) @php the_post() @endphp
 			@include('partials.content-'.get_post_type())

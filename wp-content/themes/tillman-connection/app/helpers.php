@@ -179,5 +179,6 @@ function display_sidebar()
 
 // Committee Instance of registering custom post types
 
-add_custom_post_type('Committee Member', 'Committee Members', 'committee members', 'dashicons-groups', false, 'committee-members');
+add_custom_post_type('Committee Members', 'Committee Members', 'committee members', 'dashicons-groups', false, 'committee-members');
 add_custom_post_type('Fundraiser', 'Fundraisers', 'fundraisers', 'dashicons-chart-line', true, 'fund');
+add_custom_post_type('Newsletter', 'Newsletters', 'newsletters', 'dashicons-id', true, 'newsletter');
