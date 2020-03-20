@@ -5,10 +5,15 @@ Footer
 footer {
   background-color: $dark-gray;
   border-top: 1px solid darken($dark-gray, 20%);
-  color: $silver;
+  color: $footer-text;
   display: table-row;
   height: 1px;
   padding: 1em 0;
+
+  .widget.nav_menu-3.widget_nav_menu {
+    display: flex;
+    justify-content: flex-end;
+  }
 
   .menu {
     display: flex;
@@ -20,13 +25,21 @@ footer {
       align-self: center;
 
       a {
-        color: $silver;
+        color: $footer-text;
         font-size: 1rem;
         margin-bottom: 0;
         opacity: 1;
 
         &:hover {
           color: $tillman;
+        }
+
+        &::after {
+          background: $tillman;
+          content: "";
+          display: block;
+          height: 5px;
+          margin: 1.4em auto;
         }
       }
     }
@@ -45,11 +58,18 @@ footer {
     padding-left: 0;
   }
 
-  .menu {
+  footer .menu {
     flex-direction: column;
 
     li a {
-      color: $white;
+      color: $footer-text;
+
+      &::after {
+        background: $footer-text;
+        display: block;
+        height: 1px;
+        margin: 2rem 0;
+      }
     }
   }
 }
