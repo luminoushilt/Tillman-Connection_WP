@@ -5,7 +5,7 @@ Footer
 footer {
   background-color: $dark-gray;
   border-top: 1px solid darken($dark-gray, 20%);
-  color: $footer-text;
+  color: $white;
   display: table-row;
   height: 1px;
   padding: 1em 0;
@@ -25,7 +25,7 @@ footer {
       align-self: center;
 
       a {
-        color: $footer-text;
+        color: $white;
         font-size: 1rem;
         margin-bottom: 0;
         opacity: 1;
@@ -62,10 +62,10 @@ footer {
     flex-direction: column;
 
     li a {
-      color: $footer-text;
+      color: $white;
 
       &::after {
-        background: $footer-text;
+        background: $tillman;
         display: block;
         height: 1px;
         margin: 2rem 0;

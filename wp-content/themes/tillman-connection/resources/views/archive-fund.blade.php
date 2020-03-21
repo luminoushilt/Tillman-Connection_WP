@@ -11,6 +11,7 @@
 		<h1 class="title is-size-1 is-size-3-touch">
 			{{ the_field('page_title') }}
 		</h1>
+		test
 	</section>
   <section class="fundraise-hero">
 		@while (have_posts()) @php the_post() @endphp
