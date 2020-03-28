@@ -54,9 +54,16 @@
 
     .menu-item-has-children {
       @extend .dropdown;
+      @extend .navbar-link;
+
+      &::after {
+        border-color: $white !important;
+      }
 
       &:hover {
         @extend .is-hoverable;
+
+        background-color: transparent;
       }
 
       .sub-menu {

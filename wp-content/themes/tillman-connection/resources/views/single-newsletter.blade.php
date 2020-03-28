@@ -1,11 +1,11 @@
 {{--
-  Single Post Name: Fundraiser Single Page
+  Single Post Name: Newsletter Single Page
 --}}
 
 @extends('layouts.app')
 
 @section('content')
-<!-- single-fund.blade.php -->
+<!-- single-newsletter.blade.php -->
 
 @php
 	$featured_image = get_field('banner_background_image');

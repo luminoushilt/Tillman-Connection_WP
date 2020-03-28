@@ -5,13 +5,20 @@ export default {
     const navMenu = $('.navbar-menu');
     const page = $('html, body');
     const scrollToTop = $('.back-to-top');
+    const dropDown = $('.menu-item-has-children::after');
+    const dropDownMenu = $('.sub-menu');
     
     navBurger.on('click', () => toggleMenu());
+    dropDown.on('click', () => toggleDropDown());
 
     const toggleMenu = () => {
       // Toggle the 'is-active' class on both the 'navbar-burger' and the 'navbar-menu'
       navBurger.toggleClass('is-active');
       navMenu.toggleClass('is-active');
+    }
+
+    const toggleDropDown = () => {
+      dropDownMenu.toggleClass('menu-open');
     }
 
     //Check to see if the window is top if not then display button
