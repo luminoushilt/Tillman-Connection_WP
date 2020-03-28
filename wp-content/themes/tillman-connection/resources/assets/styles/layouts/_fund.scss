@@ -1,0 +1,29 @@
+.single-fund {
+  .article-banner-container {
+    background-position: center;
+  }
+
+  .fundraise-hero {
+    .hero-section-content {
+      font-weight: 300;
+    }
+  }
+
+  .gallery {
+    @extend .columns;
+    @extend .is-multiline;
+
+    .gallery-item {
+      @extend .column;
+      @extend .is-one-quarter-desktop;
+
+      margin: 0;
+
+      img {
+        border: 2px solid $medium-gray;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
