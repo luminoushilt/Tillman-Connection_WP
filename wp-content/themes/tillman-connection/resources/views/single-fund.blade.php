@@ -18,6 +18,7 @@
   </section>
   <section class="fundraise-hero">
     <div class="container hero-section-content is-size-2 is-size-4-touch">
+      @include('partials/entry-meta')
       {{ the_field('fundraiser_details') }}
     </div>
   </section>
