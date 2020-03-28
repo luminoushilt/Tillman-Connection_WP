@@ -12,7 +12,7 @@
 @endphp
 
 <section class="hero get-connected-container" style="background-image:url({{ $featured_image['url'] }})">
-	<a class="button is-tillman-teal get-connected is-size-4 is-size-6-touch" href="#greeting">Get Connected</a>
+	<a class="button is-tillman-teal get-connected is-size-4 is-size-6-touch" href="/newsletter/">Get Connected</a>
 </section>
 <section class="hero hero-section">
 	<div class="hero-body">
