@@ -5,20 +5,21 @@
 @extends('layouts.app')
 
 @section('content')
-<!-- archive-fund.blade.php -->
-  @include('partials.page-header')
-	<section class="article-title hero article-banner-container" style="background-image:url({{ $featured_image['url'] }})">
-		<h1 class="title is-size-1 is-size-3-touch">
-			{{ the_field('page_title') }}
-		</h1>
-		test
+<!-- archive-fund.blade.php -->	
+	<section class="article-title hero article-banner-container" style="background-image:url(@asset('images/us-supreme-court-building.jpg'))">
+		<h1 class="title is-size-1 is-size-3-touch">Fundraisers</h1>
 	</section>
-  <section class="fundraise-hero">
-		@while (have_posts()) @php the_post() @endphp
-			@include('partials.content-'.get_post_type())
-		@endwhile
-		
-		{!! get_the_posts_navigation() !!}
+  <section class="hero hero-section">
+		<div class="container hero-section-content is-size-2 is-size-4-touch custom-posts-container">
+			@while (have_posts()) @php the_post() @endphp
+				@include('partials.content-'.get_post_type())
+			@endwhile
+			
+			{!! get_the_posts_navigation() !!}
+			<div class="archive-read-more">
+				<a href="{{ get_permalink() }}" class="button is-primary is-large">Continue Reading</a>
+			</div>
+		</div>
 	</section>
 @php do_action('get_contact-section') @endphp
 @include('partials.contact-section')
