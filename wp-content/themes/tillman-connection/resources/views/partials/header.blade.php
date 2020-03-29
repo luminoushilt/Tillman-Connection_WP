@@ -1,4 +1,4 @@
-<header class="banner">
+<header class="banner is-flex">
   <div class="container">
     <nav class="navbar is-tillman center-navbar-content" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
@@ -20,5 +20,8 @@
         </div>
       </div>
     </nav>
+  </div>
+  <div class="tillman-audio-player">
+    {{ the_field('music_player') }}
   </div>
 </header>
