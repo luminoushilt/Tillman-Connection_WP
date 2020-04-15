@@ -27,7 +27,7 @@
 .hero-section {
   align-items: center;
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 300 !important;
 
   &:nth-of-type(2n) {
     background-color: $silver;
