@@ -177,7 +177,7 @@ function display_sidebar()
     return register_post_type($slug_name, $args);
 }
 
-// Committee Instance of registering custom post types
+// List of Instances of registering custom post types
 
 add_custom_post_type('Committee Members', 'Committee Members', 'committee members', 'dashicons-groups', false, 'committee-members');
 add_custom_post_type('Fundraiser', 'Fundraisers', 'fundraisers', 'dashicons-chart-line', true, 'fund');
